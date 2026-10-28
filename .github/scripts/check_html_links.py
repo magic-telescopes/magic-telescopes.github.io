@@ -37,10 +37,14 @@ def check_html_file(html_file: Path) -> list[str]:
 
         path = Path(unquote(url.path))
 
-        # Absolute URLs are relative to the published site root.
-        target = ROOT / path.as_posix().lstrip("/") if path.is_absolute() else (
-            html_file.parent / path
-        )
+        # Navigation fragments use links relative to the site root.
+        if html_file.relative_to(ROOT).as_posix() == "components/menu.html":
+            target = ROOT / path.as_posix().lstrip("/")
+        elif path.is_absolute():
+            # Absolute paths are relative to the published site root.
+            target = ROOT / path.as_posix().lstrip("/")
+        else:
+            target = html_file.parent / path
 
         target = target.resolve()
 
