@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Information for external scientists about the performance of the MAGIC telescopes.">
+  <title>MAGIC Performance</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+  </script>
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="masthead-link" href="#main-content" aria-label="MAGIC Cycle 22 proposals — skip to content">
+      <img class="masthead" src="images/masthead_title.gif"
+        alt="MAGIC — Major Atmospheric Gamma Imaging Cherenkov Telescopes">
+    </a>
+  </header>
+
+
+  <main id="magic-performance" tabindex="-1">
+
+    <div id="site-menu"></div>
+    <script src="js/menu.js" defer></script>
+
+    <h1>MAGIC Performance</h1>
+
+    <p>
+      All aspects of the MAGIC performance (including tabulated
+      energy-dependent performance numbers) are described in detail in
+      <strong>Aleksić et al., <em>Astroparticle Physics</em>, Volume 72,
+        1 January 2016, Pages 76-94</strong>. The performance shown here corresponds
+      to data taken in 2013.
+    </p>
+
+    <section id="integral-sensitivity">
+      <h2>Integral sensitivity</h2>
+
+      <div class="two-column">
+        <div class="column">
+          <p>
+            We define the sensitivity as the integrated flux of a source
+            above a given energy for which the number of excess events
+            (\(N_{\mathrm{excess}}\)) divided by the square root of the
+            number of background events (\(N_{\mathrm{bkg}}\)) is equal
+            to 5 after 50 hours of effective observation time. In
+            addition, we require that
+            \(N_{\mathrm{excess}} > 10\) and
+            \(N_{\mathrm{excess}} > 0.05\,N_{\mathrm{bkg}}\).
+          </p>
+
+          <p>
+            The corresponding energy threshold is computed as the peak
+            of the true-energy distribution of a Monte Carlo sample
+            with a Crab-like spectrum. Integral sensitivity computed
+            according to different definitions and tabulated numbers
+            are available in Aleksić et al. (2016).
+          </p>
+
+          <p>
+            All the curves are computed using samples of Crab Nebula
+            data. For example, the sensitivity computed according to
+            the Li &amp; Ma significance with five background regions is
+            (<strong>0.67 ± 0.04)% C.U. above 290 GeV and
+              (1.45 ± 0.02)% C.U. above 100 GeV for 50 hours of observations</strong>.
+          </p>
+        </div>
+
+        <div class="column">
+          <figure>
+            <img src="images/performance/Magic_performance_integral_sensitivity_history.gif"
+              alt="Integral sensitivity of the MAGIC telescopes as a function of energy threshold." loading="lazy">
+            <figcaption>
+              Evolution of the integral sensitivity of the MAGIC telescopes.
+              Gray circles: sensitivity of the MAGIC-I single telescope
+              with the Siegen (light gray, long dashed) and MUX readouts
+              (dark gray, short dashed). Black triangles: stereo before
+              the upgrade. Squares: stereo after the upgrade, for zenith
+              angles below 30° (red, filled) and 30-45° (blue, empty).
+              Figure reproduced from Aleksić et al. (2016). The added
+              pink point shows the integral sensitivity above 55 GeV
+              obtained with the PKS 1441+25 detection sample.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="differential-sensitivity">
+      <h2>Differential sensitivity</h2>
+
+      <div class="two-column">
+        <div class="column">
+          <p>
+            Differential sensitivity of MAGIC: the flux of a source
+            that gives a \(5\sigma\) signal after 50 hours of observations,
+            calculated according to the Li &amp; Ma formula assuming
+            three background regions, in the estimated-energy bin
+            \(E_1\)-\(E_2\). Low-zenith-angle observations
+            (below 30°). Conversion to absolute flux units is done
+            using the Crab Nebula spectrum from Aleksić et al.
+            (2016, APh, 72, 76). Points above 63 GeV are obtained
+            with Crab Nebula data (Aleksić et al. 2016, APh, 72, 76);
+            the 40-63 GeV point is obtained with PKS 1441+25 data
+            (Ahnen et al. 2015, ApJ, 815, 23).
+            You can download the data in tabular format from <a href="downloads/performance_diff_sensitivity.txt">this
+              file</a>.
+          </p>
+        </div>
+
+        <div class="column">
+          <figure>
+            <img src="images/performance/sens_40plus_abs_v3.png"
+              alt="Differential sensitivity of the MAGIC telescopes in absolute flux units." loading="lazy">
+          </figure>
+
+          <figure>
+            <img src="images/performance/sens_40plus_v3.png"
+              alt="Differential sensitivity of the MAGIC telescopes in Crab units." loading="lazy">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="sensitivity-at-50-gev">
+      <h2>Sensitivity at approximately 50 GeV</h2>
+
+      <div class="two-column">
+        <div class="column">
+          <p>
+            Even while 50 GeV is usually below the analysis threshold
+            of the MAGIC telescopes (for a standard stereo trigger)
+            for a Crab-like spectrum, it is still possible to perform
+            scientific observations with the MAGIC telescopes at those
+            energies. Due to unfolding corrections for the energy
+            resolution and bias, it is also possible to reconstruct
+            reliable spectra at energies not far below the energy threshold.
+          </p>
+        </div>
+
+        <div class="column">
+          <p>
+            Moreover, for steep-spectrum sources (distant AGNs, GRBs,
+            and pulsars), the peak energy shifts to lower values.
+            For example, a strong \(25\sigma\) detection of the
+            \(z = 0.939\) flat-spectrum radio quasar PKS 1441+25
+            corresponds to a sensitivity of <strong>5% Crab flux above 55 GeV
+              for 50 hours of observations.</strong>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="angular-resolution">
+      <h2>Angular resolution</h2>
+
+      <div class="two-column">
+        <div class="column">
+          <p>
+            We define the angular resolution as the sigma parameter
+            of a two-dimensional Gaussian function fitted to the
+            gamma-ray excess distributions. This corresponds to
+            approximately a 39% containment radius of gamma rays.
+          </p>
+        </div>
+
+        <div class="column">
+          <figure>
+            <img src="images/performance/Magic_performance_angres_upgrade_fit.gif"
+              alt="Angular resolution of the MAGIC telescopes as a function of energy." loading="lazy">
+            <figcaption>
+              Angular resolution of the MAGIC telescopes for data
+              (points) and Monte Carlo simulations (lines). Red points:
+              low-zenith-angle sample; blue points: medium-zenith-angle
+              sample. For comparison, the pre-upgrade low-zenith-angle
+              angular resolution is shown as gray points. Figure
+              reproduced from Aleksić et al. (2016).
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</body>
+
+</html>
